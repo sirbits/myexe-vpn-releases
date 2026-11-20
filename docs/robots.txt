@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sirbits.github.io/myexe-vpn-releases/sitemap.xml

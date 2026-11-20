@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MyExe VPN">
+  <!-- Eclipse: A crescent moving through the dark, its trailing edge cut into speed lines - gone without a trace. -->
+  <defs><filter id="ecl-o" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceAlpha" operator="dilate" radius="1.3" result="d"/><feFlood flood-color="#fffaf6" flood-opacity=".92"/><feComposite in2="d" operator="in" result="o"/><feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="ecl-g" x1="10" y1="12" x2="50" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#f0a47f"/><stop offset="1" stop-color="#b04f2c"/></linearGradient>
+    <mask id="ecl-m"><rect width="64" height="64" fill="#fff"/><circle cx="41" cy="26" r="16.5" fill="#000"/>
+      <g stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M2 30 H17"/><path d="M2 38 H21"/><path d="M2 46 H27"/></g></mask></defs>
+  <g filter="url(#ecl-o)">
+    <circle cx="32" cy="32" r="23" fill="url(#ecl-g)" mask="url(#ecl-m)"/>
+    <circle cx="45" cy="21" r="3.2" fill="#d4693f"/>
+  </g>
+</svg>

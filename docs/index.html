@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyExe VPN - Free Stealth VPN Client for Windows</title>
+<meta name="description" content="MyExe VPN is a free, experimental, stealth-focused VPN client for Windows. One-click connect with automatic server discovery, a system-wide tunnel, DPI-resistant stealth, and Wi-Fi hotspot sharing.">
+<meta name="keywords" content="MyExe VPN, free VPN Windows, stealth VPN, DPI bypass, anti-censorship, VPN client, WireGuard, Shadowsocks, VLESS, Trojan, Hysteria2, TUIC, SSH tunnel, Windows VPN app">
+<link rel="canonical" href="https://sirbits.github.io/myexe-vpn-releases/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#c15f3c">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MyExe VPN">
+<meta property="og:title" content="MyExe VPN - Free Stealth VPN Client for Windows">
+<meta property="og:description" content="Free, experimental stealth VPN for Windows: one-click connect, automatic server discovery, system-wide tunnel, and Wi-Fi hotspot sharing.">
+<meta property="og:url" content="https://sirbits.github.io/myexe-vpn-releases/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MyExe VPN - Free Stealth VPN Client for Windows">
+<meta name="twitter:description" content="Free, experimental stealth VPN for Windows: one-click connect, automatic server discovery, system-wide tunnel, and Wi-Fi hotspot sharing.">
+<meta property="og:image" content="https://sirbits.github.io/myexe-vpn-releases/assets/icon-256.png">
+<meta name="twitter:image" content="https://sirbits.github.io/myexe-vpn-releases/assets/icon-256.png">
+
+<!-- Structured data: helps search engines show a rich software result -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MyExe VPN",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "SecurityApplication",
+  "description": "A free, experimental, stealth-focused VPN client for Windows with one-click connect, automatic server discovery, a system-wide tunnel, DPI-resistant stealth, and Wi-Fi hotspot sharing.",
+  "downloadUrl": "https://github.com/sirbits/myexe-vpn-releases/releases/latest",
+  "softwareVersion": "1.0.0",
+  "url": "https://sirbits.github.io/myexe-vpn-releases/",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<link rel="icon" type="image/png" href="assets/icon-256.png">
+
+<style>
+  :root{
+    --bg:#faf6f2; --panel:#fff; --txt:#211e1b; --muted:#6b6560;
+    --line:#e7dfd6; --accent:#c15f3c; --accentdim:#f3e3da;
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1a1714; --panel:#231f1b; --txt:#f0e9e2; --muted:#a79e95;
+      --line:#352f29; --accent:#e07a52; --accentdim:#36271f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1a1714; --panel:#231f1b; --txt:#f0e9e2; --muted:#a79e95;
+    --line:#352f29; --accent:#e07a52; --accentdim:#36271f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:0 16px}
+  header{text-align:center;padding:72px 16px 40px}
+  .logo{width:88px;height:88px;display:block;margin:0 auto 18px}
+  h1{font-size:34px;margin:0 0 10px;letter-spacing:-.02em}
+  .tag{font-size:19px;color:var(--muted);max-width:620px;margin:0 auto 10px}
+  .badge{display:inline-block;margin-top:8px;padding:3px 12px;border:1px solid var(--accent);
+    border-radius:999px;color:var(--accent);font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:28px 0 6px}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;
+    text-decoration:none;font-size:16px}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.ghost{background:var(--panel);color:var(--txt);border:1px solid var(--line)}
+  .sub{text-align:center;color:var(--muted);font-size:13.5px;margin-top:6px}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:28px;margin:22px 0}
+  h2{font-size:22px;margin:0 0 16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  .feat h3{margin:0 0 4px;font-size:16px}
+  .feat p{margin:0;color:var(--muted);font-size:14.5px}
+  ol{padding-left:20px}ol li{margin:8px 0}
+  code{background:var(--accentdim);padding:2px 6px;border-radius:5px;font-size:13.5px}
+  .note{background:var(--accentdim);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;font-size:14px;color:var(--txt)}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 60px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <img class="logo" src="assets/logo.svg" width="88" height="88" alt="MyExe VPN logo">
+  <h1>MyExe VPN</h1>
+  <p class="tag">A free, stealth-focused VPN client for Windows. One click to
+  connect - it finds and tests working servers for you and keeps working on
+  restrictive networks.</p>
+  <div class="badge">Experimental</div>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/sirbits/myexe-vpn-releases/releases/latest">Download for Windows</a>
+    <a class="btn ghost" href="https://github.com/sirbits/myexe-vpn-releases/releases">All releases</a>
+  </div>
+  <p class="sub">Windows 10 / 11 · 64-bit · Free</p>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="feat"><h3>One-click connect</h3><p>AUTO mode discovers, tests and ranks working servers, then picks the fastest. No server list to manage.</p></div>
+      <div class="feat"><h3>Bring your own servers</h3><p>USER mode runs your own configs or subscription links: VLESS, VMess, Trojan, Shadowsocks, Hysteria2, TUIC, SSH, WireGuard and more.</p></div>
+      <div class="feat"><h3>System-wide tunnel</h3><p>Route all PC traffic through a TUN adapter - no per-app proxy setup. Falls back to a system proxy automatically.</p></div>
+      <div class="feat"><h3>Stealth built in</h3><p>DPI-resistant handshake, TLS fragmentation and traffic shaping help the connection survive deep-packet inspection.</p></div>
+      <div class="feat"><h3>Share to your phone</h3><p>Turn your PC into a Wi-Fi hotspot that shares the protected connection, with a captive-portal login and per-device access.</p></div>
+      <div class="feat"><h3>Safety controls</h3><p>Block-direct / kill-switch so nothing leaks around the tunnel, plus optional bridges and encrypted DNS.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <ol>
+      <li>Download <code>MyExe-VPN-Setup-&lt;version&gt;.exe</code> from the <a href="https://github.com/sirbits/myexe-vpn-releases/releases/latest">Releases</a> page.</li>
+      <li>Run the installer. As a new, unsigned app, Windows SmartScreen may warn you - click <strong>More info → Run anyway</strong>.</li>
+      <li>Launch MyExe VPN. For the system-wide tunnel and the hotspot, allow the <strong>Administrator</strong> prompt.</li>
+    </ol>
+    <p class="note"><strong>Experimental:</strong> early software under active development - expect rough edges and breaking changes between releases. Use at your own risk; provided as-is, without warranty. For lawful privacy and an open internet.</p>
+  </section>
+</main>
+
+<footer>
+  <p><a href="https://github.com/sirbits/myexe-vpn-releases">GitHub</a> ·
+     <a href="https://github.com/sirbits/myexe-vpn-releases/issues">Report an issue</a></p>
+  <p>© 2026 sirbits · Team zeru</p>
+</footer>
+</body>
+</html>
