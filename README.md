@@ -28,21 +28,25 @@ to block or throttle VPN traffic.
 - **System-wide tunnel.** Route *all* PC traffic through the tunnel with a TUN
   adapter - no need to configure a proxy in each app. Falls back to a system
   proxy automatically.
-- **Stealth built in.** DPI-resistant handshake, TLS fragmentation, traffic
-  shaping and fake-packet techniques help the connection survive deep-packet
-  inspection on tough networks.
+- **Stealth built in.** Adaptive DPI evasion that learns and evolves per network,
+  TLS fragmentation, CDN domain-fronting (Cloudflare & CloudFront), traffic shaping
+  and fake-packet techniques help the connection survive deep-packet inspection on
+  tough networks.
 - **Share to your phone.** Turn your PC into a Wi-Fi hotspot that shares the
   protected connection, with a built-in captive-portal login and per-device
   access control.
 - **Safety controls.** Block-direct / kill-switch so nothing leaks around the
-  tunnel, plus optional bridges and encrypted DNS.
+  tunnel, fake-DNS so no DNS query leaks your browsing, plus optional bridges and
+  encrypted DNS.
+- **Blocks ads & trackers.** A self-updating blocklist stops ad and tracker
+  domains for your whole PC - and for every device sharing the hotspot.
 - **Clean, compact desktop UI.**
 
 ## Install
 
 1. Download `MyExe-VPN-Setup-<version>.exe` from the
    [**Releases**](../../releases) page.
-2. Run the installer. Because it's a new, unsigned app, Windows SmartScreen may
+2. Run the installer. Because it's a new app from an independent developer, Windows SmartScreen may
    warn you - click **More info → Run anyway**.
 3. Launch **MyExe VPN**. For the system-wide tunnel and the hotspot, allow the
    **Administrator** prompt (Windows needs it to create the network adapter and
@@ -74,4 +78,4 @@ through it. Provided **as-is, without warranty of any kind**.
 Found a bug or have a request? Open an issue on the
 [**Issues**](../../issues) page.
 
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
