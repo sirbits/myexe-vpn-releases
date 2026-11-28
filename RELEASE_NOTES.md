@@ -1,23 +1,27 @@
-# MyExe VPN v1.2.0
+# MyExe VPN v1.2.1
 
 **Experimental** - early software under active development. Expect rough edges
 and breaking changes between releases. Use at your own risk.
 
-## What's new in v1.2.0
-- **No real-IP leak on reconnect.** A host-wide kill-switch holds the block the
-  instant a connection drops, so your traffic stays protected while the app
-  re-establishes the tunnel.
-- **No unexpected self-exit.** The app no longer quits on its own after being
-  connected for a while, and a background UI window recycling can no longer bring
-  down the whole app.
-- **Single taskbar button.** Only one window shows on the taskbar during splash
-  and after start.
-- **Private logs.** Connection logs no longer print your network or operator name.
-- **Live server in the UI.** The server dropdown follows the node actually in use
-  and updates instantly as the fastest-node pilot switches routes.
-- **Clean exit.** On close or crash, all child processes and helper threads are
-  torn down with nothing left running in the background.
-- **Signed installer** with a valid Authenticode signature.
+## What's new in v1.2.1
+- **WebRTC leak closed.** A direct-route shortcut could let a browser reveal
+  your real address through WebRTC. Only the traffic that needs the shortcut now
+  uses it, and the installer can set Chrome, Edge, Brave and Firefox to keep
+  WebRTC on the tunnel.
+- **Fast Lane is now a fallback.** Everything goes through the tunnel first. The
+  direct lane takes over on its own only when the tunnel stops carrying traffic,
+  and hands back as soon as the tunnel recovers.
+- **DNS stays on a working path.** Encrypted DNS no longer waits behind a route
+  that is still connecting, which caused pages to stall after connect.
+- **Stability.** Fixed a crash in the packaged app after long sessions and a
+  case where a second copy would close itself in proxy mode.
+- **Live traffic meter.** The speed and usage display follows the tunnel
+  continuously.
+- **Lighter while connected.** Background server testing slows down while you
+  are connected, and dead or delisted servers are pruned sooner.
+- **Cleaner exit and updates.** Firewall rules and TTL settings are released on
+  exit, leftovers from an interrupted session are repaired at the next start,
+  and the installer releases the packet driver so an update is never blocked.
 
 ## Highlights
 - One-click **AUTO** mode: automatic server discovery, testing and failover.
@@ -31,7 +35,7 @@ and breaking changes between releases. Use at your own risk.
 - **Blocks ads and trackers** device-wide and for every hotspot client.
 
 ## Install
-Download `MyExe-VPN-Setup-1.2.0.exe` below and run it. The installer is
+Download `MyExe-VPN-Setup-1.2.1.exe` below and run it. The installer is
 code-signed, but because the publisher is independent, SmartScreen may still warn:
 click **More info** then **Run anyway**. Launch as **Administrator** for the
 system-wide tunnel and the hotspot.

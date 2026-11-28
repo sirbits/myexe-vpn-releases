@@ -93,4 +93,4 @@ Provided **as-is, without warranty of any kind**.
 Found a bug or have a request? Open an issue on the [**Issues**](../../issues)
 page.
 
-<!-- v1.2.0 -->
+<!-- v1.2.1 -->
